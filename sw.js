@@ -1,3 +1,4 @@
+importScripts("https://progressier.app/RMuvBXS4yQ0hC8vZUl2f/sw.js" );
 self.addEventListener("install", function(event) {
   event.waitUntil(
     caches.open("ramadhan-cache").then(function(cache) {
