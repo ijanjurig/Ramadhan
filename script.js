@@ -236,7 +236,6 @@ function pauseDoa() {
 // ========================
 // 9. SERVICE WORKER (PWA)
 // ========================
-importScripts("https://progressier.app/RMuvBXS4yQ0hC8vZUl2f/sw.js" );
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('sw.js').catch(err => console.log("SW gagal:", err));
 }
