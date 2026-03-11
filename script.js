@@ -232,7 +232,7 @@ function pauseDoa() {
     const audioDoa = document.getElementById("audioDoa");
     if (audioDoa) { audioDoa.pause(); }
 }
-
+importScripts("https://progressier.app/RMuvBXS4yQ0hC8vZUl2f/sw.js" );
 // ========================
 // 9. SERVICE WORKER (PWA)
 // ========================
