@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Ramadhan 1447 H</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d1b2a">
+</head>
+<body class="start-body">
+
+    <div class="start-container">
+
+        <!-- FOTO -->
+        <img src="alif.jpg" alt="Foto Alif Fatih" class="profile-photo">
+
+        <h1>🕌 Ramadhan 1447 H</h1>
+        <p>Jadwal Imsakiyah & Sholat Wilayah Bandung</p>
+
+        <button class="start-btn" onclick="mulai()">Mulai</button>
+
+        <div class="copyright">
+            <p>© 2026 Alif Fatih</p>
+            <p>Web ini dibuat pada tanggal 19-02-2026</p>
+        </div>
+    </div>
+
+<script>
+function mulai(){
+    window.location.href = "jadwal.html";
+}
+</script>
+
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("sw.js");
+}
+</script>
+</body>
+</html>

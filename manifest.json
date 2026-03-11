@@ -1,0 +1,20 @@
+{
+  "name": "Alif Ramadhan",
+  "short_name": "Alif Ramadhan 1447H",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0d1b2a",
+  "theme_color": "#0d1b2a",  "icons": [
+    {
+      "src": "foto.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+  
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

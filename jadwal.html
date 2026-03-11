@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Jadwal Imsakiyah Bandung 1447 H</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="decoration" style="position: fixed; top: 10px; right: 10px; font-size: 40px; opacity: 0.1; z-index: -1;">🌙</div>
+    <div class="decoration" style="position: fixed; bottom: 10px; left: 10px; font-size: 40px; opacity: 0.1; z-index: -1;">🕌</div>
+
+    <nav class="navbar">
+       <div class="countainer">
+       <div class="card">
+        <h1>🕌Jadwal Imsakiyah Bandung 1447 H</h1>
+        <p class="subnav">Ramadhan Kareem • Semoga Ibadah Kita Diterima Allah SWT</p>
+    </nav>
+
+    <div class="container">
+        <div class="card">
+            
+            <div class="info-box">
+                <h2 id="tanggalSekarang">Memuat Tanggal...</h2>
+                <p class="ramadhan-info" id="ramadhanHari">Memuat info Ramadhan...</p>
+                <div class="countdown-box">
+                  
+                    <h3 style="margin: 0; font-size: 14px; color: white;">⏳ Hitung Mundur Maghrib</h3>
+                    <div id="countdown">00:00:00</div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar" id="puasaProgress"></div>
+                    </div>
+                    <p id="progressText" style="font-size: 12px; margin-top: 5px; color: #f4d35e;">Progres Puasa: 0%</p>
+                </div>
+            </div>
+            <div class="doa-box" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 12px;">
+                <h3 style="margin:0; color:#2a9d8f; font-size: 16px;">Doa Berbuka Puasa</h3>
+                <p style="font-size: 1.5rem; margin: 10px 0; color: #d4af37;">ُاَللّهُمَّ لَكَ صُمْتُ وَبِكَ آمَنْتُ وَعَلَى رِزْقِكَ أَفْطَرْتُ بِرَحْمَتِكَ يَا اَرْحَمَ الرَّحِمِيْنَ</p>
+                <p style="font-size: 12px; opacity: 0.8;">"Ya Allah, untuk-Mu aku berpuasa, kepada-Mu aku beriman, dan atas rezeki-Mu aku berbuka, dengan rahmat-Mu wahai Dzat Yang Maha Penyayang di antara para penyayang"</p>
+                
+                <button class="btn-doa" onclick="playDoa()">▶️</button> 
+                 <button class="btn-doa" onclick="pauseDoa()">⏸️ Jeda</button>
+                
+            </div>
+
+            <audio id="audioDoa" src="Doa buka.mp3" preload="auto"></audio>
+
+            
+            </div>
+
+            <div class="controls">
+                <button onclick="hariIni()">Hari Ini</button>
+                <button onclick="scrollAwal()">Ke Awal</button>
+                <button onclick="scrollAkhir()">Ke Akhir</button>
+                <button onclick="toggleHighlight()">Highlight Hari Ini</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="jadwalTable">
+                    <thead>
+                        <tr>
+                            <th>Hari</th>
+                            <th>Imsak</th>
+                            <th>Subuh</th>
+                            <th>Dzuhur</th>
+                            <th>Ashar</th>
+                            <th>Maghrib</th>
+                            <th>Isya</th>
+                        </tr>
+                    </thead>
+                    <tbody id="jadwalBody"></tbody>
+                </table>
+            </div>
+
+        </div> </div> <audio id="audioAdzan" src="adzan.mp3" preload="auto"></audio>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+    
+    <footer class="footer">
+        © 2026 Alif Fatih | Web dibuat 19-02-2026
+    </footer>
+    
+    <button id="btnStopAdzan" onclick="matikanAdzan()" style="display: none; background: red; color: white; padding: 10px 20px; font-size: 16px; border: none; border-radius: 5px; cursor: pointer; margin: 10px auto;">
+   ⏹️ Matikan Adzan
+   <audio id="audioAdzan" src="adzan.mp3"></audio>
+</button>
+
+<script src="data.js"></script> 
+
+<script src="script.js" defer></script>
+
+</body>
+</html>

@@ -1,0 +1,286 @@
+/* ==================================== */
+/* PENGATURAN DASAR                     */
+/* ==================================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: #0f172a; /* Warna dasar */
+    background: radial-gradient(circle at top, #1e293b, #0f172a);
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Taburan Bintang di Latar Belakang */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/* ==================================== */
+/* HALAMAN BERANDA (START PAGE)         */
+/* ==================================== */
+.start-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.start-container {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 40px 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    max-width: 350px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+/* Memaksa foto profil tetap bulat dan ukurannya pas */
+img.profile-photo {
+    width: 150px !important;
+    height: 150px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    border: 4px solid #d4af37;
+    margin: 0 auto 20px auto;
+    display: block;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.start-container h1 {
+    font-size: 24px;
+    background: linear-gradient(to right, #f4d35e, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 10px 0;
+}
+
+.start-btn {
+    margin-top: 20px;
+    padding: 12px 35px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #d4af37, #f4d35e);
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.3s;
+    color: #000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.start-btn:hover {
+    transform: scale(1.05);
+}
+
+.copyright {
+    margin-top: 25px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.6);
+}
+
+/* ==================================== */
+/* HALAMAN JADWAL                       */
+/* ==================================== */
+.navbar {
+    padding: 30px 15px 15px;
+    text-align: center;
+    animation: fadeInDown 1s ease-out;
+}
+
+.navbar h1 {
+    font-size: 1.4rem;
+    background: linear-gradient(to right, #f4d35e, #d4af37);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0 0 5px 0;
+   font-style: Amiri;
+}
+
+.subnav {
+    color: #e0e1dd;
+    font-size: 13px;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    width: 100%;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.info-box {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-box h2 { font-style: info-box; font-size: 1.2rem; margin-bottom: 5px; }
+.ramadhan-info { color: #f4d35e; font-style: italic; font-size: 14px; margin-bottom: 15px; }
+
+.countdown-box {
+    background: rgba(0,0,0,0.2);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+#countdown {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #d4af37;
+    margin: 5px 0;
+}
+
+.progress-container {
+    background: rgba(255,255,255,0.1);
+    border-radius: 50px;
+    height: 10px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, #2a9d8f, #e9c46a);
+    height: 100%;
+    width: 0%;
+    transition: width 1s linear;
+}
+
+.doa-box {
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap; /* Tombol akan turun ke baris baru kalau layar HP kecil */
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.controls button {
+    padding: 10px 15px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(135deg, #d4af37, #f4d35e);
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    transition: transform 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.05);
+}
+
+/* ==================================== */
+/* TABEL RESPONSIVE (MENCEGAH BOCOR)    */
+/* ==================================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto; /* Memungkinkan tabel di-scroll ke samping di HP */
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.2);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 550px; /* Lebar minimum tabel agar teks tidak tergencet */
+    text-align: center;
+    font-size: 14px;
+}
+
+th {
+    background: #2a9d8f;
+    color: white;
+    padding: 12px 8px;
+    white-space: nowrap;
+}
+
+td {
+    padding: 12px 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+tr:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.highlight {
+    background: rgba(212, 175, 55, 0.2) !important;
+    border-left: 4px solid #f4d35e;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+}
+
+/* ==================================== */
+/* DESAIN TOMBOL AUDIO DOA              */
+/* ==================================== */
+.btn-doa {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #d4af37;
+    background: rgba(212, 175, 55, 0.15);
+    color: #f4d35e;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-doa:hover {
+    background: #d4af37;
+    color: #000;
+    box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+    transform: scale(1.05);
+}
